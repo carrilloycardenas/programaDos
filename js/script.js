@@ -133,8 +133,10 @@ function agudasDect(obj){
             console.log('si');
             obj.setAttribute('class', 'grid-bien'); 
         }
-        else{
-            obj.setAttribute('class', 'grid-mal'); 
+    });
+    graves.forEach(element => {
+        if(element==text){
+            obj.setAttribute('class','grid-mal');
         }
     });
 }
