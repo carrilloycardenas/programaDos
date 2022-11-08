@@ -53,11 +53,11 @@ window.onload = function(){
         for (let i = 1; i <= 30; i++) {
             if (i%2 == 0) {
                 combinadas.push(`
-                    <div class="grid-item">${esdrujulas[i-1]}</div>
+                    <div class="grid-item" onclick="gravesDect(this);">${esdrujulas[i-1]}</div>
                 `);
             } else {
                 combinadas.push(`
-                    <div class="grid-item">${graves[i-1]}</div>
+                    <div class="grid-item" onclick="gravesDect(this);">${graves[i-1]}</div>
                 `);
             }
         }
@@ -69,11 +69,11 @@ window.onload = function(){
         for (let i = 1; i <= 30; i++) {
             if (i%2 == 0) {
                 combinadas.push(`
-                    <div class="grid-item">${esdrujulas[i-1]}</div>
+                    <div class="grid-item" onclick="esdrujulasDect(this);">${esdrujulas[i-1]}</div>
                 `);
             } else {
                 combinadas.push(`
-                    <div class="grid-item">${graves[i-1]}</div>
+                    <div class="grid-item" onclick="esdrujulasDect(this);">${graves[i-1]}</div>
                 `);
             }
         }
@@ -130,7 +130,38 @@ function agudasDect(obj){
 
     agudas.forEach(element => {
         if(element==text){
-            console.log('si');
+            obj.setAttribute('class', 'grid-bien'); 
+        }
+    });
+    graves.forEach(element => {
+        if(element==text){
+            obj.setAttribute('class','grid-mal');
+        }
+    });
+}
+
+/*script para pagina de grave*/
+function gravesDect(obj){
+    const text = obj.textContent;
+
+    graves.forEach(element => {
+        if(element==text){
+            obj.setAttribute('class', 'grid-bien'); 
+        }
+    });
+    esdrujulas.forEach(element => {
+        if(element==text){
+            obj.setAttribute('class','grid-mal');
+        }
+    });
+}
+
+/*script para pagina de grave*/
+function esdrujulasDect(obj){
+    const text = obj.textContent;
+
+    esdrujulas.forEach(element => {
+        if(element==text){
             obj.setAttribute('class', 'grid-bien'); 
         }
     });
