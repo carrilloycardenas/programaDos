@@ -74,7 +74,7 @@
 #contenedor {
     width: 900px;
     margin-left: 30%;
-    margin-top: 10%;
+    margin-top: 4%;
 }
 
 #contenedorPali {
@@ -82,7 +82,7 @@
     background-color: cornflowerblue;
     width: 600px;
     /* margin-left: 30%; */
-    margin-top: 10%;
+    margin-top: 4%;
     padding: 20px;
     border-radius: 15px;
 }
