@@ -26,7 +26,12 @@ let esdrujulas = [
 
 let combinadas = [];
 
+let bien=0;
+let mal=0;
+
 window.onload = function(){
+    bien=0;
+    mal=0;
     let pagina = self.location.href;
     let ultiBarra = pagina.lastIndexOf('/');
     let nombreP = pagina.substring(ultiBarra + '/'.length, pagina.length);
@@ -130,12 +135,16 @@ function agudasDect(obj){
 
     agudas.forEach(element => {
         if(element==text){
-            obj.setAttribute('class', 'grid-bien'); 
+            obj.setAttribute('class', 'grid-bien');
+            obj.setAttribute('onclick', '');
+            conta(0);
         }
     });
     graves.forEach(element => {
         if(element==text){
             obj.setAttribute('class','grid-mal');
+            obj.setAttribute('onclick', '');
+            conta(1);
         }
     });
 }
@@ -146,12 +155,16 @@ function gravesDect(obj){
 
     graves.forEach(element => {
         if(element==text){
-            obj.setAttribute('class', 'grid-bien'); 
+            obj.setAttribute('class', 'grid-bien');
+            obj.setAttribute('onclick', '');
+            conta(0);
         }
     });
     esdrujulas.forEach(element => {
         if(element==text){
             obj.setAttribute('class','grid-mal');
+            obj.setAttribute('onclick', '');
+            conta(1);
         }
     });
 }
@@ -162,12 +175,31 @@ function esdrujulasDect(obj){
 
     esdrujulas.forEach(element => {
         if(element==text){
-            obj.setAttribute('class', 'grid-bien'); 
+            obj.setAttribute('class', 'grid-bien');
+            obj.setAttribute('onclick', '');
+            conta(0);
         }
     });
     graves.forEach(element => {
         if(element==text){
             obj.setAttribute('class','grid-mal');
+            obj.setAttribute('onclick', '');
+            conta(1);
         }
     });
+}
+
+function conta(b){
+    if(b==0){
+        bien=bien+1;
+        console.log(bien);
+        if(bien==15){
+            setTimeout(() => {
+                window.alert(`Has terminado! Aciertos: ${bien} Errores: ${mal}`);
+            }, 200);
+        }
+    }
+    else{
+        mal=mal+1;
+    }
 }
