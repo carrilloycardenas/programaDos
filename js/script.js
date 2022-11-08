@@ -168,7 +168,7 @@ function gravesDect(obj){
     });
 }
 
-/*script para pagina de grave*/
+/*script para pagina de escrujulas*/
 function esdrujulasDect(obj){
     const text = obj.textContent;
 
@@ -188,6 +188,7 @@ function esdrujulasDect(obj){
     });
 }
 
+//contador de errores y aciertos
 function conta(b){
     if(b==0){
         bien=bien+1;
