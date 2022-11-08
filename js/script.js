@@ -37,11 +37,11 @@ window.onload = function(){
         for (let i = 1; i <= 30; i++) {
             if (i%2 == 0) {
                 combinadas.push(`
-                    <div class="grid-item">${agudas[i-1]}</div>
+                    <div class="grid-item" onclick="agudasDect(this);">${agudas[i-1]}</div>
                 `);
             } else {
                 combinadas.push(`
-                    <div class="grid-item">${graves[i-1]}</div>
+                    <div class="grid-item" onclick="agudasDect(this);">${graves[i-1]}</div>
                 `);
             }
         }
@@ -124,3 +124,17 @@ function palindromo() {
     }
 }
 
+/*script para pagina de agudas*/
+function agudasDect(obj){
+    const text = obj.textContent;
+
+    agudas.forEach(element => {
+        if(element==text){
+            console.log('si');
+            obj.setAttribute('class', 'grid-select'); 
+        }
+        else{
+            console.log('no');
+        }
+    });
+}

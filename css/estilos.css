@@ -127,3 +127,12 @@
     border: 1px solid black;
     border-radius: 15px;
 }
+
+.grid-select {
+    background-color: rgb(32, 196, 81);
+    padding: 10%;
+    margin: 2px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 15px;
+}
