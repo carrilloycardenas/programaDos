@@ -35,7 +35,6 @@ window.onload = function(){
     let pagina = self.location.href;
     let ultiBarra = pagina.lastIndexOf('/');
     let nombreP = pagina.substring(ultiBarra + '/'.length, pagina.length);
-    console.log(nombreP);
     if (nombreP == 'agudas.html') {
         agudas.sort(() => Math.random()-0.5);
         graves.sort(() => Math.random()-0.5);
@@ -192,7 +191,6 @@ function esdrujulasDect(obj){
 function conta(b){
     if(b==0){
         bien=bien+1;
-        console.log(bien);
         if(bien==15){
             setTimeout(() => {
                 window.alert(`Has terminado! Aciertos: ${bien} Errores: ${mal}`);
