@@ -131,10 +131,10 @@ function agudasDect(obj){
     agudas.forEach(element => {
         if(element==text){
             console.log('si');
-            obj.setAttribute('class', 'grid-select'); 
+            obj.setAttribute('class', 'grid-bien'); 
         }
         else{
-            console.log('no');
+            obj.setAttribute('class', 'grid-mal'); 
         }
     });
 }

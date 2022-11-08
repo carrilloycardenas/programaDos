@@ -128,8 +128,17 @@
     border-radius: 15px;
 }
 
-.grid-select {
+.grid-bien {
     background-color: rgb(32, 196, 81);
+    padding: 10%;
+    margin: 2px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 15px;
+}
+
+.grid-mal {
+    background-color: rgb(224, 75, 37);
     padding: 10%;
     margin: 2px;
     text-align: center;
